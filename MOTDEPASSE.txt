@@ -1,3 +1,7 @@
+Créer un script qui génére un mot de passe pour un fichier texte.
+
+
+
 import random
 import string
 
