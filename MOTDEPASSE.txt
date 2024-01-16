@@ -1,0 +1,17 @@
+import random
+import string
+
+def generate_password(length=12):
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(random.choice(characters) for i in range(length))
+    return password
+
+def save_password_to_file(password, file_path='motdepasse.txt'):
+    with open(file_path, 'a') as file:
+        file.write(password + '\n')
+
+
+password = generate_password()
+save_password_to_file(password)
+print(f"Mot de passe généré : {password}")
+print(f"Mot de passe ajouté au fichier motdepasse.txt")
